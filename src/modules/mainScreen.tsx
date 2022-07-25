@@ -40,60 +40,52 @@ const MainScreen = (props: any) => {
             <Grid
                 container={true}
                 direction="row"
+                sx={{ padding: '1rem' }}
+                justifyContent="space-between"
             >
                 <Grid
                     item={true}
-                    md={4}
-                    xs={12}
-                    sm={6}
-                    className="wave1"
+                    md={3}
+                    xs={10}
+                    sm={5}
+                    sx={{ padding: '1rem', margin: '0px auto 0px 0px' }}
                 >
                     <MediaControlCard
                         bgColor='#f3ab08'
                         rotateDeg='44'
                         marginLeft='-24px'
                         moveCardLeftMArgin='10rem'
-                        cardWidth="70%"
                         detailsCardWidth="40%"
                     />
                 </Grid>
                 <Grid
                     item={true}
-                    md={4} xs={12}
-                    sm={6}
-                    sx={{
-                        marginTop: '9rem',
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}
-                    className="wave2"
+                    md={3}
+                    xs={10}
+                    sm={5}
+                    sx={{ padding: '1rem', margin: '0px auto' }}
                 >
                     <MediaControlCard
                         bgColor='#5aa3ce'
                         rotateDeg='14'
                         marginLeft='0px'
                         moveCardLeftMArgin='7rem'
-                        cardWidth="100%"
                         detailsCardWidth="48%"
                     />
                 </Grid>
                 <Grid
                     item={true}
-                    md={4}
-                    xs={12}
-                    sm={6}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-end'
-                    }}
-                    className="wave3"
+                    md={3}
+                    xs={10}
+                    sm={5}
+                    sx={{ padding: '1rem', margin: '0px 0px 0px auto' }}
+                    className="card3"
                 >
                     <MediaControlCard
                         bgColor='#031e2b'
                         rotateDeg='-14'
                         marginLeft='0px'
                         moveCardLeftMArgin='13px'
-                        cardWidth="100%"
                         detailsCardWidth="49%"
                     />
                 </Grid>

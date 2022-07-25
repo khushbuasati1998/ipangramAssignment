@@ -47,9 +47,25 @@ const Navbar = (props: any) => {
         >
             {navItems.map((item: string, index: number) => (
                 <MenuItem>
-                    <Button key={item} sx={{ color: '#000' }}>
-                        {item}
-                    </Button>
+                    {item === subscribeBtn ?
+                        <Button
+                            key={item}
+                            variant="outlined"
+                            sx={{
+                                color: '#000', textTransform: 'capitalize',
+                                fontWeight: 'bold',
+                                border: '3px solid rgba(25, 118, 210, 0.5)',
+                                borderRadius: 30,
+                                padding: '10px 15px',
+                            }}
+                        >
+                            {item}
+                        </Button>
+                        :
+                        <Button key={item} sx={{ color: activeIndex === index ? '#1976d2' : '#8e8484' }}>
+                            {item}
+                        </Button>
+                    }
                 </MenuItem>
             ))}
         </Menu>
@@ -101,7 +117,7 @@ const Navbar = (props: any) => {
                             </>
                         ))}
                     </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="show more"
@@ -109,6 +125,7 @@ const Navbar = (props: any) => {
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
                             color="inherit"
+                            sx={{ color: 'black' }}
                         >
                             <MoreIcon />
                         </IconButton>

@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import CurrencyRupeeSharpIcon from '@mui/icons-material/CurrencyRupeeSharp';
 
 const MediaControlCard = (
-    { bgColor, rotateDeg, marginLeft, moveCardLeftMArgin, cardWidth, detailsCardWidth }: any) => {
+    { bgColor, rotateDeg, marginLeft, moveCardLeftMArgin, detailsCardWidth }: any) => {
     return (
         <Grid className="container_row">
             <Grid className="layer1">
@@ -15,12 +15,11 @@ const MediaControlCard = (
                     background: bgColor,
                     display: 'flex',
                     color: '#fff',
-                    width: cardWidth,
                     height: '27vh',
                     fontWeight: 'bold',
                     transform: `rotate(${rotateDeg}deg)`,
                     marginLeft: marginLeft,
-                    paddingBottom: 1,
+                    padding: '1rem',
                     marginBottom: '4rem',
                     borderRadius: 4,
                     '&:hover': {
@@ -38,8 +37,8 @@ const MediaControlCard = (
                         </Box>
                     </Box>
                 </Card>
-            </Grid>
-            <Grid className="layer2">
+             </Grid>
+             <Grid className="layer2">
                 <Card sx={{
                     background: '#dad9d9',
                     display: 'flex',
@@ -70,8 +69,8 @@ const MediaControlCard = (
                         </CardContent>
                     </Box>
                 </Card>
-            </Grid>
-        </Grid>
+            </Grid> 
+         </Grid>
     );
 }
 export default MediaControlCard;
